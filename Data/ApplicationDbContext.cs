@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-
+using AppPatoBlanco_USMP.Models;
 namespace AppPatoBlanco_USMP.Data;
 
 public class ApplicationDbContext : IdentityDbContext
@@ -9,4 +9,5 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
+     public DbSet<AppPatoBlanco_USMP.Models.Contacto> Consultas {get ;set; }
 }

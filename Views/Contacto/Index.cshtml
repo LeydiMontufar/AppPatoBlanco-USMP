@@ -1,0 +1,33 @@
+@model AppPatoBlanco_USMP.Models.Contacto
+
+@{
+    ViewData["Title"] = "Contacto Pagina";
+}
+
+    <h1>@ViewData["Title"]</h1> 
+
+    <div class="text-center">
+        <h1 class="display-4">Contactenos</h1>
+
+       <form asp-controller="Contacto" asp-action="Create">
+       
+        <label asp-for="Nombre" class="form-label"></label>
+        <input asp-for="Nombre" type="text" class="form-control form-control-sm" placeholder="Escribe el nombre" />
+
+        
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email"  class="form-control" />
+        
+        
+        <label asp-for="Consult" class="control-label">Consulta</label>
+        <input asp-for="Consult" class="form-control" />
+        
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Enviar</button>
+        </div>
+    
+       </form>
+       
+        <h1>@ViewData["Message"]</h1> 
+
+    </div>

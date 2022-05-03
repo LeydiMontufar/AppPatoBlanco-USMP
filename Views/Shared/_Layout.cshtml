@@ -6,13 +6,14 @@
     <title>@ViewData["Title"] - AppPatoBlanco_USMP</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/style.css"/>
     <link rel="stylesheet" href="~/AppPatoBlanco_USMP.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AppPatoBlanco_USMP</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Pato Blanco</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -24,6 +25,14 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <!--Contacto-->
+                           <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Contacto" asp-action="Index">Contacto</a>
+                        </li>
+                        <!--Quienes Somos-->
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Quienes" asp-action="Index">Quienes Somos</a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />
@@ -48,3 +57,28 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+<footer id="footer">
+    <div class="footer-top">
+      <div class="container" data-aos="fade-up">
+        <div class="row  justify-content-center">
+          <div class="col-lg-6">
+            
+            <p>Nuestras Redes Sociales</p>
+          </div>
+        </div>
+        <div class="social-links">
+          
+          <a href="https://www.facebook.com/alfamarketingdigital97" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="https://www.instagram.com/alfa_marketing/?hl=es-la" class="instagram"><i class="bx bxl-instagram"></i></a>
+          
+         </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy;ALFA | Agencia Digital. Todos los derechos reservados. 
+      </div>
+      <div class="credits">
+        Contacto Tel: (01) 979 99543 Cel: 951 9845629 
+      </div>
+    </div>
+  </footer>

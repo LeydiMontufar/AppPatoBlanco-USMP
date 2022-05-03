@@ -16358,8 +16358,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\Views\\Contacto\\Index.cshtml",
+      "TargetPath": "Views\\Contacto\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\Views\\Shared\\_LoginPartial.cshtml",
       "TargetPath": "Views\\Shared\\_LoginPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\Views\\Quienes\\Index.cshtml",
+      "TargetPath": "Views\\Quienes\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
