@@ -9926,19 +9926,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Diego Z\\.nuget\\packages\\": {}
+    "C:\\Users\\leydi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\AppPatoBlanco-USMP.csproj",
+      "projectUniqueName": "E:\\wanser64\\uppp\\AppPatoBlanco-USMP\\AppPatoBlanco-USMP.csproj",
       "projectName": "AppPatoBlanco-USMP",
-      "projectPath": "C:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\AppPatoBlanco-USMP.csproj",
-      "packagesPath": "C:\\Users\\Diego Z\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\obj\\",
+      "projectPath": "E:\\wanser64\\uppp\\AppPatoBlanco-USMP\\AppPatoBlanco-USMP.csproj",
+      "packagesPath": "C:\\Users\\leydi\\.nuget\\packages\\",
+      "outputPath": "E:\\wanser64\\uppp\\AppPatoBlanco-USMP\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Diego Z\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\leydi\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
