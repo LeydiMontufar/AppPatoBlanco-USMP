@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 
 namespace AppPatoBlanco_USMP.Controllers
 {
-    [Route("[controller]")]
+    
     public class MetodoPago : Controller
     {
         private readonly ILogger<MetodoPago> _logger;

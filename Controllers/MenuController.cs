@@ -31,7 +31,7 @@ namespace AppPatoBlanco_USMP.Controllers
             return View(await productos.ToListAsync());
         }
 
-        public async Task<IActionResult> Details( int id)
+        public async Task<IActionResult> Details(int? id)
         {
             var productos = from o in _context.Productos select o;
             Producto objProduct = await _context.Productos.FindAsync(id);

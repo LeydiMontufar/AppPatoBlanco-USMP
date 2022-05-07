@@ -9,6 +9,7 @@ using AppPatoBlanco_USMP.Models;
 using AppPatoBlanco_USMP.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
+
 namespace AppPatoBlanco_USMP.Controllers
 {
   
