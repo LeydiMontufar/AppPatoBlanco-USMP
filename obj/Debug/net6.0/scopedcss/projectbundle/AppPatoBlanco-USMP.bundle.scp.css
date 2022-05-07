@@ -19,13 +19,13 @@ a[b-ag6vr65y1g] {
 }
 
 .nav-pills .nav-link.active[b-ag6vr65y1g], .nav-pills .show > .nav-link[b-ag6vr65y1g] {
-  color: #fff;
+  color: rgb(255, 136, 0);
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
 
 .border-top[b-ag6vr65y1g] {
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid rgb(255, 136, 0);
 }
 .border-bottom[b-ag6vr65y1g] {
   border-bottom: 1px solid #e5e5e5;

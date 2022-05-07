@@ -10,4 +10,5 @@ public class ApplicationDbContext : IdentityDbContext
     {
     }
      public DbSet<AppPatoBlanco_USMP.Models.Contacto> Consultas {get ;set; }
+     public DbSet<AppPatoBlanco_USMP.Models.Producto> Productos {get ;set; }
 }

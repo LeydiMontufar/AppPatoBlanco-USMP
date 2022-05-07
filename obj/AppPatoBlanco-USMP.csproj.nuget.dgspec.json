@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\AppPatoBlanco-USMP.csproj": {}
+    "C:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\AppPatoBlanco-USMP.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\AppPatoBlanco-USMP.csproj": {
+    "C:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\AppPatoBlanco-USMP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\AppPatoBlanco-USMP.csproj",
+        "projectUniqueName": "C:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\AppPatoBlanco-USMP.csproj",
         "projectName": "AppPatoBlanco-USMP",
-        "projectPath": "c:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\AppPatoBlanco-USMP.csproj",
+        "projectPath": "C:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\AppPatoBlanco-USMP.csproj",
         "packagesPath": "C:\\Users\\Diego Z\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\obj\\",
+        "outputPath": "C:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Diego Z\\AppData\\Roaming\\NuGet\\NuGet.Config"

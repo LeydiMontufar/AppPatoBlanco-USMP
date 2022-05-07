@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Vuumd2GBwuGk6GtLmFOUwm+/Reu90FdJFCW9npskiFI6dWSGIjfMnEE40F+e/fOe27fQb1+oHwrgM3aI0ysMyQ==",
+  "dgSpecHash": "wZ5pGg3RwnAwagiG9Xciy0R0rvdzhRMSdTC2inQmVJPravm0RZA/Z02Rvkgp5yOKorZnJw4Xf3cq0u/iOfOuag==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\AppPatoBlanco-USMP.csproj",
+  "projectFilePath": "C:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\AppPatoBlanco-USMP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Diego Z\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Diego Z\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

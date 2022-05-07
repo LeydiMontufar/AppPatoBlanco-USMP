@@ -16333,6 +16333,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\Views\\Menu\\Index.cshtml",
+      "TargetPath": "Views\\Menu\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
       "FileKind": "mvc"
@@ -16355,6 +16360,16 @@
     {
       "FilePath": "c:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\Views\\Menu\\Details.cshtml",
+      "TargetPath": "Views\\Menu\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Diego Z\\Documents\\PROYECTO_PROGRAMACION1\\AppPatoBlanco-USMP\\Views\\MetodoPago\\metodopago.cshtml",
+      "TargetPath": "Views\\MetodoPago\\metodopago.cshtml",
       "FileKind": "mvc"
     },
     {

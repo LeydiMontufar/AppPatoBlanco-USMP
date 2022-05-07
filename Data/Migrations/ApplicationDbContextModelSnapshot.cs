@@ -51,6 +51,48 @@ namespace AppPatoBlanco_USMP.Data.Migrations
                     b.ToTable("t_contacto");
                 });
 
+            modelBuilder.Entity("AppPatoBlanco_USMP.Models.Producto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("desc");
+
+                    b.Property<string>("Imagen")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("imagen");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("nomPro");
+
+                    b.Property<decimal>("PorcentajeDesc")
+                        .HasColumnType("numeric")
+                        .HasColumnName("porDesc");
+
+                    b.Property<decimal>("Precio")
+                        .HasColumnType("numeric")
+                        .HasColumnName("precio");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("status");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("t_product");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
