@@ -8,34 +8,46 @@
 
 <body>
 
-<div class="row">
-    <div class="col-md-4">
-        <section class="login-fondo">
-            <form id="account" method="post">
-                <div class="header1">
-                    <h1 >@ViewData["Title"]</h1>  
+<style>
+    .bg{
+       
+        background-position:center center;
+    }
+</style>
+
+<h1>@ViewData["Title"]</h1>
+<section class="page-section" id="contact">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6 text-center">
+                        <h2 class="mt-0">Iniciar Sesion</h2>
+                        <hr class="divider" />
+                        
+                    </div>
                 </div>
+                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                    <div class="col-lg-6">
+                       
+    <div class="text-center">
+        <h1 class="display-4"></h1>
+            <form id="account" method="post">
+                <div class="mb-4 ">
+                
                 <hr />
                 <div class="main1">
 
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <span>
-                    <div class="form-floating">
-                        <i></i>
-                        <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
-                        <label asp-for="Input.Email" class="form-label"></label>
-                        <span asp-validation-for="Input.Email" class="text-danger"></span>
-                    </div>
-                </span>
-                <span>
-                    <div class="form-floating">
-                        <i></i>
-                        <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
-                        <label asp-for="Input.Password" class="form-label"></label>
-                        <span asp-validation-for="Input.Password" class="text-danger"></span>
-                    </div>
-                </span>
-                <div>
+                <div class="mb-4">
+                    <input asp-for="Input.Email" class="form-control  form-control-sm" autocomplete="username" aria-required="true" />
+                    <label asp-for="Input.Email" class="form-label"></label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
+                    <label asp-for="Input.Password" class="form-label">Contraseña</label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
                     <div class="checkbox">
                         <label asp-for="Input.RememberMe" class="form-label">
                             <input class="form-check-input" asp-for="Input.RememberMe" />
@@ -43,28 +55,34 @@
                         </label>
                     </div>
                 </div>
-                <div>
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">INICIAR</button>
+                <div class="d-grid">
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary btn-xl" >Iniciar Sesion</button>
                 </div>
-                <div>
+                <div class="my-3">
                     <p>
-                        <a id="forgot-password" asp-page="./ForgotPassword">Recuperar su contraseña?</a>
+                        <a id="forgot-password" asp-page="./ForgotPassword">Olvidaste tu contraseña?</a>
                     </p>
                     <p>
                         <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Nuevo usuario</a>
                     </p>
                     <p>
-                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Confirmación de email</a>
+                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Reenviar email de confirmacion</a>
                     </p>
                 </div>
                 </div>
+                
             </form>
+        </div>
+     </div>
+                </div>
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
+                        <i class="bi-phone fs-2 mb-3 text-muted"></i>
+                        
+                    </div>
+                </div>
+            </div>
         </section>
-    </div>
-    
-</div>
-</body>
-
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }

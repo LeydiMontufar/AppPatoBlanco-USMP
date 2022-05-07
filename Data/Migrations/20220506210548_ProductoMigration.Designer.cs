@@ -3,6 +3,7 @@ using System;
 using AppPatoBlanco_USMP.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AppPatoBlanco_USMP.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220506210548_ProductoMigration")]
+    partial class ProductoMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,48 +51,6 @@ namespace AppPatoBlanco_USMP.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("t_contacto");
-                });
-
-            modelBuilder.Entity("AppPatoBlanco_USMP.Models.Producto", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasColumnName("id");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Descripcion")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("desc");
-
-                    b.Property<string>("Imagen")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("imagen");
-
-                    b.Property<string>("Nombre")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("nomPro");
-
-                    b.Property<decimal>("PorcentajeDesc")
-                        .HasColumnType("numeric")
-                        .HasColumnName("porDesc");
-
-                    b.Property<decimal>("Precio")
-                        .HasColumnType("numeric")
-                        .HasColumnName("precio");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("status");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("t_product");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

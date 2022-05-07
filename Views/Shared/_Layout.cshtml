@@ -6,26 +6,40 @@
     <title>@ViewData["Title"] - AppPatoBlanco_USMP</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/AppPatoBlanco_USMP.styles.css" asp-append-version="true" />
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+     <script src="https://kit.fontawesome.com/134f75f772.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body >
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AppPatoBlanco_USMP</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3 bg-dark" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Pato Blanco</a>
+                <button class="navbar-toggler text-dark" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                       
+                        <!--Contacto-->
+                           <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Contacto" asp-action="Index">Contacto</a>
                         </li>
+                        <!--Comprar desde la web-->
+                           <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Menu" asp-action="Index">Menu</a>
+                        </li>
+                        <!--Quienes Somos-->
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Quienes" asp-action="Index">Quienes Somos</a>
                         </li>
                     </ul>
+                    
                     <partial name="_LoginPartial" />
                 </div>
             </div>
@@ -37,14 +51,49 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - AppPatoBlanco_USMP - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
+<footer id="footer" class="bg-dark text-white">
+
+    <div class="container">
+        <nav class="row">
+            <!--logo-->
+            <a href="" class="col-3 text-reset text-uppercase d-flex align-items-center">
+                <img src="~/img/logopato.jpg" alt="" class="img-logo mr-2">
+            </a>
+            <!--redes sociales-->
+            <ul class="col-3 list-unstyled">
+                <li class="font-weight-bold text-uppercase">Redes Sociales</li>
+                <li class="d-flex justify-content-between">
+                   <a href="#"class="text-reset">
+                       <i class="fa-brands fa-facebook"></i>
+                   </a>
+                   
+                   <a href="#"class="text-reset">
+                       <i class="fa-brands fa-whatsapp"></i>
+                   </a>
+                   <a href="#"class="text-reset">
+                       <i class="fa-brands fa-instagram"></i>
+                   </a>
+                   <a href="#"class="text-reset"></a>
+                </li>  
+
+            </ul>
+
+            <div class="container footer-bottom ">
+            <div class="copyright">
+           Todos los derechos reservados. 
+            </div>
+            
+             </div>
+        </nav>
+
+    </div>
+   
+  </footer>
 </html>
