@@ -8,7 +8,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using AppPatoBlanco_USMP.Models;
 using AppPatoBlanco_USMP.Data;
-
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 
