@@ -8,7 +8,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using AppPatoBlanco_USMP.Models;
 using AppPatoBlanco_USMP.Data;
-
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 
@@ -52,7 +51,7 @@ namespace AppPatoBlanco_USMP.Controllers
                 List<Producto> productos = new List<Producto>();
                 return View("Index",productos);
             }else{
-                var producto = await _context.DataProducto.FindAsync(id);
+                var producto = await _context.Productos.FindAsync(id); 
                 Proforma proforma =new Proforma();
                 proforma.Producto = producto;
                 proforma.Precio=producto.Precio;
