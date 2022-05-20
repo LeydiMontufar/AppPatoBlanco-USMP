@@ -6,36 +6,21 @@
 }
 <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
 
-
-
-<style>
-    .bg{
-       
-        background-position:center center;
-    }
-</style>
-
+    <link href="~/css/styles copy.css" rel="stylesheet" />
 <h1>@ViewData["Title"]</h1>
-<section class="page-section" id="contact">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">Iniciar Sesion</h2>
-                        <hr class="divider" />
-                        
-                    </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-                    <div class="col-lg-6">
-                       
-    <div class="text-center">
-        <h1 class="display-4"></h1>
-            <form id="account" method="post">
+<section class="page-section clearfix" id="contact">
+    <div class="">
+        <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="~/img/comida.jpg" alt="..." />
+                <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                    <h2 class="section-heading mb-4 text-center">
+                            <span class="section-heading-lower">LOGIN</span>
+                            <hr class="divider" />
+                    </h2>
+                    <form id="account" method="post">
                 <div class="mb-4 ">
-                
                 <hr />
-                <div class="main1">
-
+                <div>
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-floating mb-3">
                     <input asp-for="Input.Email" class="form-control  form-control-sm" autocomplete="username" aria-required="true" />
@@ -54,7 +39,7 @@
                             @Html.DisplayNameFor(m => m.Input.RememberMe)
                         </label>
                     </div>
-                </div>
+                </div><br>
                 <div class="form-group">
                     <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary btn-xl" >Iniciar Sesion</button>
                 </div>
@@ -72,17 +57,12 @@
                 </div>
                 
             </form>
+                </div>
         </div>
-     </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                        <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
+    </div>
+</section>
+
+
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
