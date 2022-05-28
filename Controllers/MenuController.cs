@@ -27,12 +27,7 @@ namespace AppPatoBlanco_USMP.Controllers
             _userManager= userManager;
         }
 
-        public async Task<IActionResult> Index()
-        {
-            var productos = from o in _context.Productos select o;
-            
-            return View(await productos.ToListAsync());
-        }
+        
 
         public async Task<IActionResult> Details(int? id)
         {
@@ -62,6 +57,20 @@ namespace AppPatoBlanco_USMP.Controllers
                 return RedirectToAction(nameof(Index));
             }
         }
+        //Buscar Producto 
+        public async Task<IActionResult> Index(string ? searchString)
+        {
+            var productos = from o in _context.Productos select o;
+            
+            
+
+            if(!String.IsNullOrEmpty(searchString)){
+                productos= productos.Where(s => s.Nombre.Contains(searchString) || s.Descripcion.Contains(searchString));
+            }
+
+            return View(await productos.ToListAsync());
+        }
+
         
         
     }
