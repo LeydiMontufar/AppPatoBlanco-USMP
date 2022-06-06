@@ -16,11 +16,11 @@ namespace AppPatoBlanco_USMP.Controllers
  
     public class MenuController : Controller
     {
-        private readonly ILogger<ProductoController> _logger;
+        private readonly ILogger<MenuController> _logger;
         private readonly ApplicationDbContext _context;
         private readonly UserManager<IdentityUser> _userManager;
 
-        public MenuController(ApplicationDbContext context,ILogger<ProductoController> logger,UserManager<IdentityUser> userManager)
+        public MenuController(ApplicationDbContext context,ILogger<MenuController> logger,UserManager<IdentityUser> userManager)
         {
             _context = context;
             _logger = logger;

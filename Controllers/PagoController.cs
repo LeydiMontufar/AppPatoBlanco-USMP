@@ -41,13 +41,13 @@ namespace AppPatoBlanco_USMP.Controllers
             var itemsProforma = from o in _context.DataProforma select o;
             itemsProforma = itemsProforma.
                 Include(p => p.Producto).
-                Where(s => s.UserID.Equals(pago.UserID) && s.Status.Equals("PENDIENTE"));
+                Where(s => s.UserID.Equals(pago.UserID) && s.Status.Equals("Pendiente"));
 
             Pedido pedido = new Pedido();
             pedido.UserID = pago.UserID;
             pedido.Total = pago.MontoTotal;
             pedido.pago = pago;
-            pedido.Status = "PENDIENTE";
+            pedido.Status = "Pendiente";
             _context.Add(pedido);
 
 
