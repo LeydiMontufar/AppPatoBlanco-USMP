@@ -1,6 +1,5 @@
- @model AppPatoBlanco_USMP.Models.Producto
+@model AppPatoBlanco_USMP.Models.Producto
  
-
 
 
  
@@ -20,16 +19,16 @@
                         <p class="lead">@Html.DisplayFor(model => model.Descripcion)</p>
                         <div class="d-flex">
                             <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                            <button class="btn btn-outline-dark flex-shrink-0" type="button" asp-action="Add" asp-route-id="Id">
-                                <i class="bi-cart-fill me-1"></i>
-                                Add to cart
-                            </button>
+                               <form asp-action="Add">
+                                    <input type="hidden" asp-for="Id" />
+                                    <input type="submit" value="AÑADIR" class="btn btn-outline-dark"/>        
+                                </form>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
 
 
 
@@ -41,7 +40,7 @@
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            <img class="card-img-top" src="~/img/carrito/pachamanca.jpg" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -52,8 +51,8 @@
                                 </div>
                             </div>
                             <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent" >                             
+                                <div class="text-center"><a  class="btn btn-outline-dark mt-auto"  href="https://localhost:7009/Menu/Details/8">Ver Platillo</a></div>
                             </div>
                         </div>
                     </div>
@@ -62,7 +61,7 @@
                             <!-- Sale badge-->
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            <img class="card-img-top" src="~/img/carrito/frejol.jpg" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -82,8 +81,8 @@
                                 </div>
                             </div>
                             <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent" >                             
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto"  href="https://localhost:7009/Menu/Details/7">Ver Platillo</a></div>
                             </div>
                         </div>
                     </div>
@@ -92,7 +91,7 @@
                             <!-- Sale badge-->
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            <img class="card-img-top" src="~/img/carrito/suspiro.jpg" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -104,15 +103,15 @@
                                 </div>
                             </div>
                             <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                           <div class="card-footer p-4 pt-0 border-top-0 bg-transparent" >                             
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto"  href="https://localhost:7009/Menu/Details/12">Ver Platillo</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            <img class="card-img-top" src="~/img/carrito/piedelimon.jpg" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -131,11 +130,13 @@
                                 </div>
                             </div>
                             <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                           <div class="card-footer p-4 pt-0 border-top-0 bg-transparent" >                             
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://localhost:7009/Menu/Details/11">Ver Platillo</a></div>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
