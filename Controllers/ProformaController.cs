@@ -37,5 +37,40 @@ namespace AppPatoBlanco_USMP.Controllers
 
              return View(model);
         }
+
+            public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var produto = await _context.DataProforma
+                .FirstOrDefaultAsync(m => m.id == id);
+            if (produto == null)
+            {
+                return NotFound();
+            }
+            
+
+            return View(produto);
+        }
+
+        // POST: Produtos/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var produto = await _context.DataProforma.FindAsync(id);
+            _context.DataProforma.Remove(produto);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+            private bool ProdutoExists(int id)
+        {
+            return _context.DataProforma.Any(e => e.id == id);
+        }
+
     }
 }
