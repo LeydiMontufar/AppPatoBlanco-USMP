@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Dynamic;
+using Microsoft.AspNetCore.Http;
 
 
 namespace AppPatoBlanco_USMP.Controllers
@@ -24,6 +25,9 @@ namespace AppPatoBlanco_USMP.Controllers
             _userManager = userManager;
         }
         public async Task<IActionResult> Index(){
+            var producto  = Util.SessionExtensions.Get<Producto>(HttpContext.Session,"Producto");
+
+
             var  userID = _userManager.GetUserName(User);
             var items = from o in _context.DataProforma select o;
             items = items.Include(p => p.Producto).Where(w => w.UserID.Equals(userID) && w.Status.Equals("Pendiente"));
