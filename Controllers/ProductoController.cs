@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc;
 using AppPatoBlanco_USMP.Data;
 using AppPatoBlanco_USMP.Models;
+using Microsoft.AspNetCore.Identity;
+
 
 
 namespace AppPatoBlanco_USMP.Controllers
@@ -19,6 +21,25 @@ namespace AppPatoBlanco_USMP.Controllers
         {
             _context = context;
         }
+
+        //Buscador
+        public async Task<IActionResult> Buscador(string? searchString)
+        {
+            
+            var productos = from o in _context.Productos select o;
+            //SELECT * FROM t_productos -> &
+            if(!String.IsNullOrEmpty(searchString)){
+                productos = productos.Where(s => s.Nombre.Contains(searchString)); //Algebra de bool
+                // & + WHERE name like '%ABC%'
+            }
+            productos = productos.Where(s => s.Status.Contains("Activo"));
+            
+            return View(await productos.ToListAsync());
+        }
+
+
+
+
 
         // GET: Producto
         public async Task<IActionResult> Index()
