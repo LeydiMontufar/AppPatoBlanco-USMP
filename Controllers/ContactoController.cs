@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using AppPatoBlanco_USMP.Models;
 using AppPatoBlanco_USMP.Data;
 using Microsoft.EntityFrameworkCore;
+using AppPatoBlanco_USMP.Integration.Sendgrid;
 
 namespace AppPatoBlanco_USMP.Controllers
 {
@@ -17,10 +18,13 @@ namespace AppPatoBlanco_USMP.Controllers
         private readonly ILogger<ContactoController> _logger;
 
         private readonly ApplicationDbContext _context;
-        public ContactoController (ApplicationDbContext context, ILogger<ContactoController> logger)
+
+         private readonly SendMailIntegration _sendgrid;
+        public ContactoController (ApplicationDbContext context, ILogger<ContactoController> logger, SendMailIntegration sendgrid)
         {
             _context = context;
             _logger = logger;
+             _sendgrid = sendgrid;
         }
 
         public IActionResult Index()
@@ -29,11 +33,20 @@ namespace AppPatoBlanco_USMP.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Contacto objContacto)
-        {
+        public async Task<IActionResult> Create(Contacto objContacto){
+        
 
             _context.Add(objContacto);
             _context.SaveChanges();
+
+             await _sendgrid.SendMail(objContacto.Email,
+            objContacto.Nombre,
+            "Hola Bienvenido al PB",
+            "Revisaremos tu consulta",
+            SendMailIntegration.SEND_SENDGRID);
+
+
+
             ViewData["Message"] = "Se registro el contacto";
 
             return View("Index");
