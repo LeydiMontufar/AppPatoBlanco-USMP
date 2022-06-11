@@ -25,7 +25,7 @@ namespace AppPatoBlanco_USMP.Controllers
             _userManager = userManager;
         }
         public async Task<IActionResult> Index(){
-            var producto  = Util.SessionExtensions.Get<Producto>(HttpContext.Session,"Producto");
+           /* var producto  = Util.SessionExtensions.Get<Producto>(HttpContext.Session,"Producto");*/
 
 
             var  userID = _userManager.GetUserName(User);

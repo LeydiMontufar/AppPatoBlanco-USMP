@@ -1,0 +1,96 @@
+@model IEnumerable<AppPatoBlanco_USMP.Models.Proforma>
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+@{
+    ViewData["Title"] = "Reportes-";
+}
+
+<div class  = "container">
+    <hr>
+
+
+         <h1>HISTORIAL DE VENTAS</h1>
+         <hr size="5px" width="30%" align="left" color="#000000"/>
+
+
+
+
+<!--<p>
+    <a asp-action="Create">Create New</a>
+</p>-->
+
+     <table id="datatablesSimple">
+    <thead>
+        <tr>
+            <th>
+               <h4 @Html.DisplayNameFor(model => model.UserID)>Cliente</h4> 
+            </th>
+            <th></th>
+            <th>
+               <h4 @Html.DisplayNameFor(model => model.Precio)>Precio</h4>
+            </th>
+            <th></th>
+            <th>
+               <h4 @Html.DisplayNameFor(model => model.Cantidad)>Cantidad</h4>
+            </th>
+            <th></th>
+            <th>
+               <h4 @Html.DisplayNameFor(model => model.Producto)>Platillo</h4> 
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserID)
+            </td>
+            <td></td>
+            <td>
+                $@Html.DisplayFor(modelItem => item.Precio)
+            </td>
+            <td></td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad)
+            </td>
+            <td></td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Producto.Nombre)
+            </td>
+
+                
+            
+        </tr>
+}
+    </tbody>
+</table>
+ <hr size="5px" width="30%" align="left" color="#000000"/>
+     
+     
+      
+
+
+     
+
+
+
+
+         
+
+
+
+
+</div>

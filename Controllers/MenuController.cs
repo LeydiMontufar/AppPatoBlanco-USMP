@@ -29,10 +29,24 @@ namespace AppPatoBlanco_USMP.Controllers
         }
 
         
+        public async Task<IActionResult> Index(string? searchString)
+        {
+            
+            var productos = from o in _context.Productos select o;
+            //SELECT * FROM t_productos -> &
+            if(!String.IsNullOrEmpty(searchString)){
+                productos = productos.Where(s => s.Nombre.Contains(searchString)); //Algebra de bool
+                // & + WHERE name like '%ABC%'
+            }
+            productos = productos.Where(s => s.Status.Contains("Activo"));
+            
+            return View(await productos.ToListAsync());
+        }
+
 
         public async Task<IActionResult> Details(int? id)
         {
-            var productos = from o in _context.Productos select o;
+            /*var productos = from o in _context.Productos select o;*/
             Producto objProduct = await _context.Productos.FindAsync(id);
             if(objProduct == null){
                 return NotFound();
@@ -40,6 +54,8 @@ namespace AppPatoBlanco_USMP.Controllers
         
             return View(objProduct);
         }
+
+
         public async Task<IActionResult> Add(int? id){
             var userID = _userManager.GetUserName(User);
             if(userID == null){
@@ -49,7 +65,7 @@ namespace AppPatoBlanco_USMP.Controllers
             }else{
                 var producto = await _context.Productos.FindAsync(id);
                 
-                Util.SessionExtensions.Set<Producto>(HttpContext.Session,"Producto", producto);
+             /*   Util.SessionExtensions.Set<Producto>(HttpContext.Session,"Producto", producto);*/
 
                 Proforma proforma =new Proforma();
                 proforma.Producto = producto;
@@ -61,19 +77,10 @@ namespace AppPatoBlanco_USMP.Controllers
                 return RedirectToAction(nameof(Index));
             }
         }
-        //Buscar Producto 
-        public async Task<IActionResult> Index(string ? searchString)
-        {
-            var productos = from o in _context.Productos select o;
-            
-            
 
-            if(!String.IsNullOrEmpty(searchString)){
-                productos= productos.Where(s => s.Nombre.Contains(searchString) || s.Descripcion.Contains(searchString));
-            }
 
-            return View(await productos.ToListAsync());
-        }
+
+        
 
         
         
