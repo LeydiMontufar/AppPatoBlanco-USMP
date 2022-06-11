@@ -1,0 +1,30 @@
+POST https://api.sendgrid.com/v3/mail/send HTTP/1.1
+Authorization: Bearer 
+Content-Type: application/json  
+
+{
+  "categories": [
+    "demo"
+  ],
+  "from": {
+    "email": "jeanpierre_montalvo@usmp.pe",
+    "name": "Mail Service"
+  },
+  "personalizations": [
+    {
+      "to": [
+        {
+          "email": "jeanpierzxy@gmail.com",
+          "name": "Fred D"
+        }
+      ],
+      "subject": "Hola"
+    }
+  ],
+  "content": [
+    {
+      "type": "text/plain",
+      "value": "Hola ahora ya uso sendgrid!"
+    }
+  ],
+}
