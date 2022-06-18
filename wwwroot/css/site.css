@@ -57,7 +57,12 @@ html {
 
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  
+  margin: 0;
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
 }
 .footer {
   position: absolute;

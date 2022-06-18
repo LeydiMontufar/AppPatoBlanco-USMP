@@ -22,25 +22,25 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                            </li>
+                        
+                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index"><b>Home</b></a>&nbsp;&nbsp;
+                           
                        
                         <!--Contacto-->
-                           <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Contacto" asp-action="Index">Contacto</a>
-                        </li>
+                           
+                            <a class="nav-link text-white" asp-area="" asp-controller="Contacto" asp-action="Index"><b>Contacto</b></a>&nbsp;&nbsp;
+                        
                         <!--Comprar desde la web-->
-                           <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Menu" asp-action="Index">Menu</a>
-                        </li>
+                           
+                            <a class="nav-link text-white" asp-area="" asp-controller="Menu" asp-action="Index"><b>Menu</b></a>&nbsp;&nbsp;
+                       
                         <!--Quienes Somos-->
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Quienes" asp-action="Index">Quienes Somos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Reserva" asp-action="Index">Reserva</a>
-                        </li>                        
+                       
+                            <a class="nav-link text-white" asp-area="" asp-controller="Quienes" asp-action="Index"><b>Quienes Somos</b></a>&nbsp;&nbsp;
+
+                            <a class="nav-link text-white" asp-area="" asp-controller="Reserva" asp-action="Index"><b>Reserva</b></a>&nbsp;&nbsp;
+                       
+                                           
                         
                         <partial name="_MenuPartial" />
                     </ul>
@@ -67,17 +67,22 @@
             <div class="col-sm-2 content">                 
                <h4>Servicios</h4>
             <ul>
-              <li><a href="https://localhost:7009/">Inicio</a></li>
-              <li><a href="https://localhost:7009/Contacto">Contacto</a></li>
-              <li><a href="https://localhost:7009/Menu">Menu</a></li>              
-              <li><a href="https://localhost:7009/Quienes">Quienes Somos</a></li>
+              <li><a asp-controller="Home" asp-action="Index" class="text-white">Inicio</a></li>
+              <li><a asp-controller="Contacto" asp-action="Index" class="text-white">Contacto</a></li>
+              <li><a asp-controller="Menu" asp-action="Index" class="text-white">Menu</a></li>              
+              <li><a asp-controller="Quienes" asp-action="Index" class="text-white">Quienes Somos</a></li>
+              <li><a asp-controller="Reserva" asp-action="Index" class="text-white">Reserva</a></li>
             </ul>
             </div>
             <div class="col-sm-6 content">   
                 <!--logo-->
                 <a href="" class="col-3 text-reset text-uppercase d-flex align-items-center">
+
+                  
+
                
                   <img src="~/img/logopato.png" alt="" class="img-logo mr-2">
+
                 </a>
                 <!--redes sociales-->
                 <ul class="col-3 list-unstyled">
@@ -102,8 +107,9 @@
                 </div>             
             </div>
             <div class="col-sm-4 mapp">
+                <h1 >Ubicanos</h1>
                <div data-aos="fade-up">
-                <iframe style="border:0; width: 450px; height: 200px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2319.8963837473866!2d-76.94313852831844!3d-12.072042063645771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c6e79034dc63%3A0x393610bdc506718b!2sFacultad%20de%20Ingenier%C3%ADa%20y%20Arquitectura%20-%20USMP!5e0!3m2!1ses!2spe!4v1655507543029!5m2!1ses!2spe" width="450px" height="200px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                
                 </div>
             </div>
         </div>
@@ -119,8 +125,7 @@
       .mapp{
            display:flex;
           flex-direction: column;
-          justify-content:flex-end;
-          align-items:flex-end      
+              
       }
   </style>
 
