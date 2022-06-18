@@ -28,7 +28,7 @@ namespace AppPatoBlanco_USMP.Controllers
             _userManager= userManager;
         }
 
-        
+        //Buscador
         public async Task<IActionResult> Index(string? searchString)
         {
             
