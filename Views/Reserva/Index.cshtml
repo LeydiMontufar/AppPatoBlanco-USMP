@@ -4,63 +4,52 @@
     ViewData["Title"] = "Contacto Pagina";
 }
 
-
 <section class="page-section" id="contact">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">Reservaciones</h2>
-                        <hr class="divider" />
-                        <p class="text-muted mb-5">Bienvenido a el Pato Blanco reserve una mesa</p>
-                    </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-                    <div class="col-lg-6">
-                       
-    <div class="text-center">
-        <h1 class="display-4"></h1>
-
-      <form asp-controller="Reserva" asp-action="Create">
-
-       <div class="form-floating mb-3">
-        <label asp-for="Correo" class="form-label"> </label> 
-        <input asp-for="Correo" type="text" class="form-control form-control-sm" placeholder="" />
-        </div>
-        
-        <div class="form-floating mb-3">
-        <label asp-for="Telefono" class="control-label"> </label> 
-        <input asp-for="Telefono"  class="form-control" placeholder="" />  
-        </div>
-        <div class="form-floating mb-3">
-        <label asp-for="Fecha" class="control-label"> </label>
-        <input asp-for="Fecha" class="form-control" />
-        </div>
-         <div class="form-floating mb-3">
-        <label asp-for="Horario" class="control-label"> </label>
-        <input asp-for="Horario" class="form-control" />
-        </div>
-        <div class="form-floating mb-3">
-        <label asp-for="Cantidad" class="control-label"> </label>
-        <input asp-for="Cantidad" class="form-control" />
-        </div>
-        <div class="form-group">
-            <button  type="submit" class="w-100 btn btn-lg btn-primary btn-xl" >Reservar</button>
-       </div>    
-       </form>
-
-       
-        <h1>@ViewData["Message"]</h1> 
-
-    </div>
-     </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                        <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                        <div>+51 998844379</div>
-                    </div>
-                </div>
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6 text-center">
+                <h2 class="mt-0">Reservaciones</h2>
+                    <hr class="divider" />
+                    <p class="text-muted mb-5">Bienvenido a el Pato Blanco reserve una mesa</p>
             </div>
-        </section>
+        </div>
+        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+        <div class="col-lg-6">                       
+            <div class="text-center">
+                <h1 class="display-4"></h1>
+
+                <form asp-controller="Reserva" asp-action="Create">
+
+                    <div class="form-floating mb-3">
+                        <label asp-for="Correo" class="form-label"> </label> 
+                        <input asp-for="Correo" type="text" class="form-control form-control-sm" placeholder="Correo" />
+                    </div>
+        
+                    <div class="form-floating mb-3">
+                        <label asp-for="Telefono" class="control-label"> </label> 
+                        <input asp-for="Telefono"  class="form-control" placeholder="Telefono" />  
+                    </div>
+                    <div class="form-floating mb-3">
+                        <label asp-for="Fecha" class="control-label"> </label>
+                        <input asp-for="Fecha" class="form-control" placeholder="Fecha"  />
+                    </div>
+                    <div class="form-floating mb-3">
+                        <label asp-for="Horario" class="control-label"> </label>
+                        <input asp-for="Horario" class="form-control" placeholder="Fecha"  />
+                    </div>
+                    <div class="form-floating mb-3">
+                        <label asp-for="Cantidad" class="control-label"> </label>
+                        <input asp-for="Cantidad" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <button  type="submit" class="w-100 btn btn-lg btn-primary btn-xl" >Reservar</button>
+                    </div>    
+                </form>       
+                <h1>@ViewData["Message"]</h1> 
+            </div>
+        </div>                      
+        </div>
+    </div>
+</section>
 
 
