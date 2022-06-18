@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -38,9 +41,12 @@
                        
                             <a class="nav-link text-white" asp-area="" asp-controller="Quienes" asp-action="Index"><b>Quienes Somos</b></a>&nbsp;&nbsp;
 
-                            <a class="nav-link text-white" asp-area="" asp-controller="Reserva" asp-action="Index"><b>Reserva</b></a>&nbsp;&nbsp;
+                            
                        
-                                           
+                          @if (SignInManager.IsSignedIn(User)){
+                            <a class="nav-link text-white" asp-area="" asp-controller="Reserva" asp-action="Index"><b>Reserva</b></a>
+                          }
+                 
                         
                         <partial name="_MenuPartial" />
                     </ul>
