@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -38,9 +41,12 @@
                        
                             <a class="nav-link text-white" asp-area="" asp-controller="Quienes" asp-action="Index"><b>Quienes Somos</b></a>&nbsp;&nbsp;
 
-                            <a class="nav-link text-white" asp-area="" asp-controller="Reserva" asp-action="Index"><b>Reserva</b></a>&nbsp;&nbsp;
+                            
                        
-                                           
+                          @if (SignInManager.IsSignedIn(User)){
+                            <a class="nav-link text-white" asp-area="" asp-controller="Reserva" asp-action="Index"><b>Reserva</b></a>
+                          }
+                 
                         
                         <partial name="_MenuPartial" />
                     </ul>
@@ -109,7 +115,7 @@
             <div class="col-sm-4 mapp">
                 <h1 >Ubicanos</h1>
                <div data-aos="fade-up">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2319.8963837473866!2d-76.94313852831844!3d-12.072042063645771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c6e79034dc63%3A0x393610bdc506718b!2sFacultad%20de%20Ingenier%C3%ADa%20y%20Arquitectura%20-%20USMP!5e0!3m2!1ses!2spe!4v1655507543029!5m2!1ses!2spe" width="450px" height="200px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1950.8200017322683!2d-77.01905172905919!3d-12.06827198091092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c89be24eee43%3A0x72939f3f3851fb88!2sBarra%20Cevichera%20Cancha%20%26%20Concha!5e0!3m2!1ses!2spe!4v1655523596627!5m2!1ses!2spe" width="450px" height="200px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                
                 </div>
             </div>
         </div>
